@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main(){
+    int tr,n,a[100],curr,total;
+printf("Enter no of tracks");
+scanf("%d",&tr);
+printf("Enter the no of requests");
+scanf("%d",&n);
+printf("Enter request sequence");
+for(int i=0;i<n;i++)
+scanf("%d",&a[i]);
+
+printf("Enter current head position :");
+scanf("%d",&curr);
+
+printf("\nThe seek sequence is :");
+for(int i=0;i<n;i++)
+printf("%d\t",a[i]);
+
+for(int i=0;i<n;i++)
+{total+=abs(a[i]-curr);
+curr=a[i];}
+
+printf("\nTotal head movements:  %d ",total);
+
+}
